@@ -14,9 +14,17 @@ const app = express();
 
 // Middleware
 // app.use(cors());
+// app.use(cors({
+//   origin: "http://localhost:5173"
+// }));
+
 app.use(cors({
-  origin: "http://localhost:5173"
+  origin: [
+    "http://localhost:5173",
+    "https://guess-the-number-game123.netlify.app"
+  ]
 }));
+
 
 app.use(express.json());
 
